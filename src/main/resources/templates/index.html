@@ -78,7 +78,6 @@
             font-weight: bold;
             font-size: 18px;
         }
-
     </style>
 
 </head>
@@ -93,26 +92,34 @@
           action="/upload"
           enctype="multipart/form-data">
 
-        <label for="environment">Environment:</label>
-
-        <select id="environment" name="environment" required>
-            <option value="">-- Select Environment --</option>
-            <option value="E2E1">E2E1</option>
-            <option value="E2E2">E2E2</option>
-            <option value="QA">QA</option>
-            <option value="UAT">UAT</option>
-            <option value="PROD">PROD</option>
-        </select>
-
-        <label>
-            Select Excel File
-        </label>
-
-        <input type="file"
-               name="file"
-               accept=".xlsx,.xls"
-               required>
-
+        <table>
+            <tr>
+                <th>
+                    <label for="environment">Environment:</label>
+                </th>
+                <td>
+                    <select id="environment" name="environment" required>
+                        <option value="">-- Select Environment --</option>
+                        <option value="E2E1">E2E1</option>
+                        <option value="E2E2">E2E2</option>
+                        <option value="QA">QA</option>
+                        <option value="UAT">UAT</option>
+                        <option value="PROD">PROD</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label>Select Excel File</label>
+                </th>
+                <td>
+                    <input type="file"
+                           name="file"
+                           accept=".xlsx,.xls"
+                           required>
+                </td>
+            </tr>
+        </table>
         <button type="submit">
             Upload & Commit
         </button>

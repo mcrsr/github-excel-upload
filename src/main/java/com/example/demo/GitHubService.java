@@ -121,7 +121,7 @@ public class GitHubService {
                         "/repos/{owner}/{repo}/actions/workflows/{workflow}/dispatches",
                         owner,
                         repository,
-                        "automation.yml"
+                        "selenium-tests.yml"
                 )
                 .body(requestBody)
                 .retrieve()
